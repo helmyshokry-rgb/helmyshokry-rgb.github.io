@@ -77,26 +77,38 @@
       border-radius: 12px;
       padding: 25px;
     }
-    .book .number { color: var(--gold); font-size: 13px; }
-    .book h3 { font-size: 23px; line-height: 1.5; }
-    .book p { color: var(--muted); }
-    .links { display: flex; gap: 15px; flex-wrap: wrap; }
-    footer {
-      border-top: 1px solid #34444a;
-      margin-top: 40px;
-      padding: 25px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .en { display: none; }
-    body.english { direction: ltr; }
-    body.english .ar { display: none; }
-    body.english .en { display: block; }
-    body.english nav { direction: ltr; }
-    @media (max-width: 600px) {
-      .hero { padding: 55px 0 35px; }
-      .nav { align-items: flex-start; }
-      nav { gap: 10px; }
+    
+.book .cover {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  margin: 18px auto;
+  border-radius: 6px;
+}
+.book h3 { font-size: 23px; line-height: 1.5; }
+.book p { color: var(--muted); }
+.links { display: flex; gap: 15px; flex-wrap: wrap; }
+footer {
+  border-top: 1px solid #34444a;
+  margin-top: 40px;
+  padding: 25px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.en { display: none; }
+body.english { direction: ltr; }
+body.english .ar { display: none; }
+body.english .en { display: block; }
+body.english nav { direction: ltr; }
+@media (max-width: 600px) {
+  .hero { padding: 55px 0 35px; }
+  .nav { align-items: flex-start; }
+  nav { gap: 10px; }
+}
+
     }
   </style>
 </head>
@@ -147,32 +159,36 @@
         <p class="intro ar">اكتشف الكتب التي تتناول الأفكار وتأثيرها في الإنسان والمجتمع.</p>
         <p class="intro en">Explore books about ideas and their influence on people and society.</p>
 
-        <div class="books">
-          <article class="book">
-            <div class="number">01 · ARABIC</div>
-            <h3>الأفكار التي تسكننا</h3>
-            <p class="ar">كتاب يتناول الأفكار التي تعيش داخلنا وتؤثر في نظرتنا إلى أنفسنا والعالم.</p>
-            <p class="en">The Arabic edition of The Ideas That Live Within Us.</p>
-            <a href="https://www.kobo.com/ie/en/author/helmy-shokry" target="_blank" rel="noopener noreferrer">Kobo — <span class="ar">صفحة المؤلف</span><span class="en">Author Page</span></a>
-          </article>
+       
+<div class="books">
+  <article class="book">
+    <div class="number">01 · ARABIC</div>
+    <img src="ideas-ar.jpg.jpg" alt="غلاف كتاب الأفكار التي تسكننا" class="cover">
+    <h3>الأفكار التي تسكننا</h3>
+    <p class="ar">كتاب يتناول الأفكار التي تعيش داخلنا وتؤثر في نظرتنا إلى أنفسنا والعالم.</p>
+    <p class="en">The Arabic edition of The Ideas That Live Within Us.</p>
+    <a href="https://www.kobo.com/ie/en/author/helmy-shokry" target="_blank" rel="noopener noreferrer">Kobo — <span class="ar">صفحة المؤلف</span><span class="en">Author Page</span></a>
+  </article>
 
-          <article class="book">
-            <div class="number">02 · ENGLISH</div>
-            <h3>The Ideas That Live Within Us</h3>
-            <p class="en">A reflection on the ideas that shape our awareness and influence how we understand ourselves and the world.</p>
-            <p class="ar">النسخة الإنجليزية من «الأفكار التي تسكننا».</p>
-            <a href="https://www.kobo.com/ie/en/author/helmy-shokry" target="_blank" rel="noopener noreferrer">Kobo — <span class="ar">صفحة المؤلف</span><span class="en">Author Page</span></a>
-          </article>
+  <article class="book">
+    <div class="number">02 · ENGLISH</div>
+    <img src="ideas-en.jpg.jpg" alt="Cover of The Ideas That Live Within Us" class="cover">
+    <h3>The Ideas That Live Within Us</h3>
+    <p class="en">A reflection on the ideas that shape our awareness and influence how we understand ourselves and the world.</p>
+    <p class="ar">النسخة الإنجليزية من «الأفكار التي تسكننا».</p>
+    <a href="https://www.kobo.com/ie/en/author/helmy-shokry" target="_blank" rel="noopener noreferrer">Kobo — <span class="ar">صفحة المؤلف</span><span class="en">Author Page</span></a>
+  </article>
 
-          <article class="book">
-            <div class="number">03 · BOOK</div>
-            <h3 class="ar">التعصّب: السلاح الذي يسكن العقول</h3>
-            <h3 class="en">Intolerance: The Weapon That Dwells in the Mind</h3>
-            <p class="ar">كتاب يناقش التعصب وأبعاده الفكرية والإنسانية.</p>
-            <p class="en">An exploration of intolerance and its intellectual and human dimensions.</p>
-            <a href="https://www.lulu.com/shop/helmy-shokry/%D8%A7%D9%84%D8%AA%D8%B9%D8%B5%D8%A8-%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D8%AD-%D8%A7%D9%84%D8%B0%D9%8A-%D9%8A%D8%B3%D9%83%D9%86-%D8%A7%D9%84%D8%B9%D9%82%D9%88%D9%84/ebook/product-p6m2r5r.html?page=1&pageSize=4" target="_blank" rel="noopener noreferrer">Lulu — <span class="ar">صفحة الكتاب</span><span class="en">Book Page</span></a>
-          </article>
-        </div>
+  <article class="book">
+    <div class="number">03 · BOOK</div>
+    <img src="intolerance-ar.jpg.jpg" alt="غلاف كتاب التعصب: السلاح الذي يسكن العقول" class="cover">
+    <h3 class="ar">التعصّب: السلاح الذي يسكن العقول</h3>
+    <h3 class="en">Intolerance: The Weapon That Dwells in the Mind</h3>
+    <p class="ar">كتاب يناقش التعصب وأبعاده الفكرية والإنسانية.</p>
+    <p class="en">An exploration of intolerance and its intellectual and human dimensions.</p>
+    <a href="https://www.lulu.com/shop/helmy-shokry/%D8%A7%D9%84%D8%AA%D8%B9%D8%B5%D8%A8-%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D8%AD-%D8%A7%D9%84%D8%B0%D9%8A-%D9%8A%D8%B3%D9%83%D9%86-%D8%A7%D9%84%D8%B9%D9%82%D9%88%D9%84/ebook/product-p6m2r5r.html?page=1&pageSize=4" target="_blank" rel="noopener noreferrer">Lulu — <span class="ar">صفحة الكتاب</span><span class="en">Book Page</span></a>
+  </article>
+</div>
       </div>
     </section>
 

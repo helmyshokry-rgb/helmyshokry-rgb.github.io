@@ -200,6 +200,19 @@
   .social .txt{display:inline}
   @media (max-width:520px){ .social .txt{display:none} .social a{min-width:42px;padding:0} }
 
+  /* ---------- share ---------- */
+  .share-box{
+    border:1px solid var(--line);border-radius:18px;
+    padding:clamp(24px,4vw,40px);
+    background:linear-gradient(160deg,rgba(217,189,138,.07),transparent 62%),var(--panel);
+  }
+  .share-box h2{margin:0 0 10px;font-size:clamp(1.35rem,3vw,1.85rem)}
+  .share-box p{margin:0 0 24px;color:var(--muted);max-width:62ch}
+  .share-row{display:flex;gap:10px;flex-wrap:wrap}
+  .share-row .btn{font-size:.9rem;padding:11px 20px}
+  .share-row .btn svg{width:17px;height:17px;flex:none}
+  .copy-note{font-size:.84rem;color:var(--gold);margin:14px 0 0;min-height:1.3em}
+
   .hero-art{position:relative;width:100%;aspect-ratio:1/1.06;max-height:470px}
   .hero-art img{
     position:absolute;width:52%;height:auto;border-radius:8px;box-shadow:var(--shadow);
@@ -455,6 +468,40 @@
       </blockquote>
     </section>
 
+    <section id="share">
+      <div class="share-box">
+        <span class="kicker"><span class="ar">شارك</span><span class="en">Share</span></span>
+        <h2><span class="ar">إذا وصلتك فكرة… أوصلها لغيرك</span><span class="en">If an idea reached you, pass it on</span></h2>
+        <p>
+          <span class="ar">لا يوجد إعلان هنا ولا ميزانية — كل من يصل إلى هذه الصفحة وصل إليها لأن شخصًا شاركها. مشاركة واحدة منك تعني قارئًا جديدًا لا يعرفني بعد.</span>
+          <span class="en">There are no ads and no budget here — everyone who finds this page found it because someone shared it. One share from you means a new reader who does not know me yet.</span>
+        </p>
+        <div class="share-row">
+          <a class="btn" href="#" data-share="whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2"/></svg>
+            <span><span class="ar">واتساب</span><span class="en">WhatsApp</span></span>
+          </a>
+          <a class="btn ghost" href="#" data-share="telegram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6.6 13.1l-4.9-1.5c-1.1-.3-1.1-1 .2-1.5l19-7.3c.9-.3 1.6.2 1 1.5"/></svg>
+            <span><span class="ar">تيليجرام</span><span class="en">Telegram</span></span>
+          </a>
+          <a class="btn ghost" href="#" data-share="x" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span><span class="ar">على X</span><span class="en">Post on X</span></span>
+          </a>
+          <a class="btn ghost" href="#" data-share="facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94"/></svg>
+            <span><span class="ar">فيسبوك</span><span class="en">Facebook</span></span>
+          </a>
+          <button class="btn ghost" type="button" data-copy>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.4"/><path d="M15 5.5A2.5 2.5 0 0 0 12.5 3H6a2.5 2.5 0 0 0-2.5 2.5V12A2.5 2.5 0 0 0 6 14.5"/></svg>
+            <span><span class="ar">انسخ الرابط</span><span class="en">Copy link</span></span>
+          </button>
+        </div>
+        <p class="copy-note" data-copy-note role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="contact-card">
         <div>
@@ -515,6 +562,66 @@
     try { saved = localStorage.getItem("hs-lang"); } catch (e) {}
     if (saved === "en") applyLanguage(true);
     else if (!saved && (navigator.language || "").toLowerCase().indexOf("ar") !== 0) applyLanguage(true);
+  })();
+
+  (function () {
+    var url = location.href.split('#')[0];
+    var msgAr = 'حلمي شكري — كاتب في الأفكار والوعي والتعصّب. كتبه بالعربية والإنجليزية:';
+    var msgEn = 'Helmy Shokry — writing on ideas, awareness and intolerance. Books in Arabic & English:';
+    function currentMsg() {
+      return document.body.classList.contains('english') ? msgEn : msgAr;
+    }
+    function shareUrl(net) {
+      var u = encodeURIComponent(url);
+      var t = encodeURIComponent(currentMsg());
+      if (net === 'whatsapp') return 'https://wa.me/?text=' + t + '%20' + u;
+      if (net === 'telegram') return 'https://t.me/share/url?url=' + u + '&text=' + t;
+      if (net === 'x') return 'https://x.com/intent/tweet?text=' + t + '&url=' + u;
+      if (net === 'facebook') return 'https://www.facebook.com/sharer/sharer.php?u=' + u;
+      return url;
+    }
+    var links = document.querySelectorAll('[data-share]');
+    function refresh() {
+      Array.prototype.forEach.call(links, function (a) {
+        a.setAttribute('href', shareUrl(a.getAttribute('data-share')));
+      });
+    }
+    refresh();
+    Array.prototype.forEach.call(links, function (a) {
+      a.addEventListener('click', refresh);
+    });
+    var langBtn = document.getElementById('langBtn');
+    if (langBtn) langBtn.addEventListener('click', function () { setTimeout(refresh, 0); });
+
+    var note = document.querySelector('[data-copy-note]');
+    var copyBtn = document.querySelector('[data-copy]');
+    function copied() {
+      if (!note) return;
+      note.textContent = document.body.classList.contains('english')
+        ? 'Link copied — thank you.'
+        : 'تم نسخ الرابط — شكرًا لك.';
+      setTimeout(function () { note.textContent = ''; }, 4000);
+    }
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(copied, legacyCopy);
+        } else {
+          legacyCopy();
+        }
+      });
+    }
+    function legacyCopy() {
+      var ta = document.createElement('textarea');
+      ta.value = url;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); copied(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
   })();
 </script>
 </body>
